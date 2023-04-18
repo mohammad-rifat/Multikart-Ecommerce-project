@@ -1,0 +1,214 @@
+@import "../variables/variable";
+@import "../base/common";
+/*==========================
+BLOG PART START 
+==========================*/
+#blog {
+  margin-bottom: 70px;
+  .container {
+    .blog_slider {
+      .blog_item {
+        display: flex;
+        justify-content: center;
+        .item {
+          .image {
+            position: relative;
+            max-width: 348px;
+            max-height: 206px;
+            a {
+              max-width: inherit;
+              max-height: inherit;
+              img {
+                max-width: inherit;
+                max-height: inherit;
+              }
+            }
+            .img_shad {
+              position: absolute;
+              top: 0;
+              left: 0;
+              height: 100%;
+              width: 100%;
+              display: flex;
+              overflow: hidden;
+              .shad {
+                width: 25%;
+                height: 100%;
+                background-color: #ff4c3b73;
+              }
+              .one {
+                height: 0;
+                transition: all 0.2s steps(4);
+              }
+              .two {
+                height: 0;
+                transition: all 0.3s steps(4);
+              }
+              .three {
+                height: 0;
+                transition: all 0.4s steps(4);
+              }
+              .four {
+                height: 0;
+                transition: all 0.5s steps(4);
+              }
+              &:hover .shad.one,
+              &:hover .shad.two,
+              &:hover .shad.three,
+              &:hover .shad.four {
+                height: 100%;
+              }
+            }
+          }
+          .text {
+            text-align: center;
+            h4 {
+              color: $orange_color;
+              margin-top: 25px;
+              padding-bottom: 10px;
+              line-height: 1;
+              margin-bottom: 0;
+              font-size: 18px;
+            }
+            a {
+              width: 270px;
+              margin: auto;
+              font-weight: 700;
+              font-size: 16px;
+              line-height: 24px;
+              color: $black_color;
+              text-transform: uppercase;
+              padding-bottom: 5px;
+              transition: $transition;
+              position: relative;
+              &:hover {
+                color: $orange_color;
+              }
+              &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: $black_color;
+                height: 1px;
+                width: 100px;
+              }
+            }
+            span {
+              display: block;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 14px;
+              letter-spacing: 2px;
+              color: $grey_color;
+              margin-top: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/*==========================
+BLOG PART END
+==========================*/
+//DARK MODE SETTINGS START 
+body.dark{
+  #blog {
+    margin-bottom: 70px;
+    .container {
+      .common_heading{
+        h2{
+          color: $white_color;
+        }
+        span{
+          color: $white_color;
+        }
+      }
+      .blog_slider {
+        .blog_item {
+          display: flex;
+          justify-content: center;
+          .item {
+            .image {
+              position: relative;
+              max-width: 348px;
+              max-height: 206px;
+              a {
+                max-width: inherit;
+                max-height: inherit;
+                img {
+                  max-width: inherit;
+                  max-height: inherit;
+                }
+              }
+              .img_shad {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                overflow: hidden;
+                .shad {
+                  width: 25%;
+                  height: 100%;
+                  background-color: #ff4c3b73;
+                }
+                .one {
+                  height: 0;
+                  transition: all 0.2s steps(4);
+                }
+                .two {
+                  height: 0;
+                  transition: all 0.3s steps(4);
+                }
+                .three {
+                  height: 0;
+                  transition: all 0.4s steps(4);
+                }
+                .four {
+                  height: 0;
+                  transition: all 0.5s steps(4);
+                }
+                &:hover .shad.one,
+                &:hover .shad.two,
+                &:hover .shad.three,
+                &:hover .shad.four {
+                  height: 100%;
+                }
+              }
+            }
+            .text {
+              text-align: center;
+              h4 {
+                color: $dark_white_color;
+              }
+              a {
+                color: $dark_white_color;
+                &:hover {
+                  color: $orange_color;
+                }
+                &::after {
+                  content: "";
+                  position: absolute;
+                  bottom: 0;
+                  left: 50%;
+                  transform: translateX(-50%);
+                  background-color: $black_color;
+                  height: 1px;
+                  width: 100px;
+                }
+              }
+              span {
+               color: $dark_white_color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//DARK MODE SETTINGS END

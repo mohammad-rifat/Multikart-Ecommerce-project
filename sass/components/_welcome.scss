@@ -1,0 +1,126 @@
+@import "../base/common";
+@import "../variables/variable";
+/*==========================
+WELCOME START 
+==========================*/
+#welcome {
+  background: $welcome_bg;
+  color: $welcome_text_color;
+  font-family: $font_family_lato;
+  font-size: 14px;
+  padding: 10px;
+  height: 50px;
+  .container {
+    .row {
+      .col-lg-6 {
+        .left_side {
+          display: flex;
+          gap: 20px;
+          span {
+            i {
+              font-size: 10px;
+              padding-right: 5px;
+              color: $orange_color;
+            }
+          }
+        }
+        .right_side {
+          ul {
+            display: flex;
+            justify-content: end;
+            gap: 20px;
+            li {
+              transition: all linear 0.3s;
+              position: relative;
+              a {
+                color: $welcome_text_color;
+                transition: all linear 0.3s;
+                i {
+                  padding-right: 5px;
+                  padding-left: 5px;
+                }
+              }
+              i {
+                padding-right: 5px;
+                padding-left: 5px;
+              }
+              i.fa-chevron-down {
+                font-size: 10px;
+              }
+              ul.log_in_out {
+                background-color: $white_color;
+                width: 100px;
+                padding: 10px;
+                box-sizing: border-box;
+                display: block;
+                color: $black_color;
+                position: absolute;
+                top: calc(100% + 20px);
+                right: 0;
+                opacity: 0;
+                visibility: hidden;
+                transition: all linear 0.3s;
+                z-index: 9999 !important;
+                li {
+                  &:hover {
+                    cursor: pointer;
+                  }
+                }
+              }
+              &:hover {
+                cursor: pointer;
+                color: $orange_color;
+              }
+              &:hover a {
+                color: $orange_color;
+              }
+              &:hover ul {
+                opacity: 1;
+                visibility: visible;
+                top: 100%;
+                z-index: 999;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* dark mode start*/
+body.dark {
+  #welcome {
+    background-color: $black_color_5;
+  }
+}
+
+body.dark {
+  #welcome {
+    .container {
+      .row {
+        .col-lg-6 {
+          .right_side {
+            ul {
+              li {
+                ul.log_in_out {
+                  background-color: $black_color_5;
+                  li {
+                    color: $white_color;
+                    &:hover {
+                      color: $orange_color;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* dark mode end */
+
+/*==========================
+WELCOME END 
+==========================*/

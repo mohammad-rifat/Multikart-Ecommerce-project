@@ -1,0 +1,58 @@
+@import "../variables/variable";
+/* ======================
+    COMMON CSS START
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: $font_family_lato;
+}
+body{
+  overflow-x: hidden !important;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: $black_color;
+  display: inline-block;
+}
+.common_heading {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  span {
+    color: $orange_color;
+    font-size: 20px;
+  }
+  h2 {
+    position: relative;
+    font-weight: 700;
+    font-size: 32px;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    &::after {
+      content: "";
+      height: 2px;
+      width: 80px;
+      background-color: $orange_color;
+      position: absolute;
+      top: calc(100% + 5px);
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  p {
+    font-weight: 400;
+    font-size: 14px;
+    color: #777777;
+    margin-bottom: 5px;
+  }
+}
+
+
+/* ======================
+      COMMON CSS END
+  ========================= */

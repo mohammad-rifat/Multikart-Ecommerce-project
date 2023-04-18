@@ -1,0 +1,65 @@
+@import "../variables/variable";
+
+/* ===================================
+              BANNER START
+====================================*/
+#banner {
+  z-index: 100;
+  .container-fluid {
+    #carouselExample {
+      .carousel-inner {
+        position: relative;
+        .carousel-item {
+          position: relative;
+          img {
+          }
+          .absolute_part {
+            position: absolute;
+            top: 50%;
+            left: 30%;
+            transform: translateX(-50%) translateY(-50%);
+            text-align: center;
+            p {
+              font-size: 18px;
+              line-height: 18px;
+              color: $grey_color;
+              font-weight: 700;
+              letter-spacing: 0.4em;
+            }
+            h1 {
+              font-size: 60px;
+              line-height: 72px;
+              color: $black_color_3;
+              font-weight: 700;
+            }
+            button {
+              padding: 13px 29px;
+              color: #fff !important;
+              letter-spacing: 0.05em;
+              border: 2px solid $orange_color !important;
+              background-image: linear-gradient(
+                30deg,
+                $orange_color 50%,
+                transparent 50%
+              ) !important;
+              background-size: 850px;
+              background-repeat: no-repeat;
+              background-position: 0;
+              transition: background 0.3s ease-in-out;
+              border-radius: 0;
+              &:hover{
+                background-position: 100%;
+                color: #000 !important;
+                background-color: #fff;
+                transition: 0.3s ease-in-out;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* ===================================
+              BANNER END
+====================================*/

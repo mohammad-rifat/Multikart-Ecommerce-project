@@ -1,0 +1,80 @@
+@import "../variables/variable";
+@import "../base/common";
+@import "../mixin/mixin";
+/* ======================
+    FOOTER PART START
+========================= */
+footer {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  .container {
+    .row {
+      .col-lg-6 {
+        display: flex;
+        align-items: center;
+        .item {
+          p {
+            margin-bottom: 0;
+            @include paragraph;
+          }
+        }
+        .images {
+          width: 100%;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          gap: 15px;
+          picture {
+            max-width: 26px;
+            max-height: 26px;
+            img {
+              max-height: inherit;
+              max-width: inherit;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* ======================
+    FOOTER PART END
+========================= */
+//DARK MODE SETTINGS START
+body.dark {
+  footer {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    .container {
+      .row {
+        .col-lg-6 {
+          display: flex;
+          align-items: center;
+          .item {
+            p {
+              color: $dark_white_color;
+            }
+          }
+          .images {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            picture {
+              max-width: 26px;
+              max-height: 26px;
+              img {
+                max-height: inherit;
+                max-width: inherit;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//DARK MODE SETTINGS END

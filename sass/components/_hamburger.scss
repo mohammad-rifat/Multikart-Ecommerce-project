@@ -1,0 +1,53 @@
+@import "../base/common";
+@import "../variables/variable";
+
+/* =====================================
+    HAMBURGER START
+======================================== */
+#hamburger {
+  background-color: $welcome_bg;
+  padding: 30px 0;
+  .container {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      li {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 16px;
+        color: $black_color_3;
+        display: flex;
+        gap: 5px;
+        span {
+          opacity: 80%;
+        }
+      }
+    }
+  }
+}
+/* =====================================
+    HAMBURGER END
+======================================== */
+//DARK MODE START
+body.dark {
+  #hamburger {
+    background-color: $black_color_3;
+    padding: 30px 0;
+    .container {
+      ul {
+        display: flex;
+        justify-content: space-between;
+        li {
+          color: $white_color;
+          a {
+            color: inherit;
+          }
+          span {
+            opacity: 80%;
+          }
+        }
+      }
+    }
+  }
+}
+//DARK MODE END

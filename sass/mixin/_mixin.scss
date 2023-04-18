@@ -1,0 +1,52 @@
+@import "../variables/variable";
+
+@mixin h3 {
+  font-weight: 700;
+  font-size: 16px;
+  color: $black_color_3;
+  text-transform: uppercase;
+}
+@mixin del {
+  font-size: 14px;
+  font-weight: 400;
+  color: #aaaaaa;
+}
+
+@mixin common_button {
+  padding: 13px 29px;
+  color: #fff !important;
+  letter-spacing: 0.05em;
+  border: 2px solid $orange_color !important;
+  background-image: linear-gradient(
+    30deg,
+    $orange_color 50%,
+    transparent 50%
+  ) !important;
+  background-size: 850px;
+  background-repeat: no-repeat;
+  background-position: 0;
+  transition: background 0.3s ease-in-out;
+  text-transform: uppercase;
+  margin-top: 10px;
+  &:hover {
+    background-position: 100%;
+    color: #000 !important;
+    background-color: #fff;
+  }
+}
+
+@mixin paragraph{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: $grey_color;
+}
+
+@mixin common_input{
+  display: inline-block;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  padding: 15px 25px;
+  outline: none;
+  box-shadow: none;
+}

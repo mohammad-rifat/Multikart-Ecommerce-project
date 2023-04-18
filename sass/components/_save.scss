@@ -1,0 +1,57 @@
+@import "../variables/variable";
+
+/* ======================
+      SAVE PART START
+  ========================= */
+#save {
+  margin: 70px 0px;
+  .container {
+    .row {
+      .col-lg-6 {
+        .image {
+          max-width: 100%;
+          height: auto;
+          overflow: hidden !important;
+          position: relative;
+          a {
+            max-width: inherit;
+            height: inherit;
+            position: relative;
+            img {
+              max-width: inherit;
+              height: inherit;
+              transition: all linear 0.3s;
+              &:hover {
+                transform: scale(1.1);
+              }
+            }
+          }
+          .offer {
+            position: absolute;
+            top: 50%;
+            left: 70%;
+            transform: translateX(-50%) translateY(-50%);
+            text-align: center;
+            background: none;
+            pointer-events: none;
+            span {
+              color: $orange_color;
+              font-weight: 700;
+              font-size: 18px;
+              line-height: 18px;
+            }
+            h1 {
+              color: #222222;
+              font-size: 55px;
+              font-weight: 700;
+              line-height: 55px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* ======================
+      SAVE PART END
+  ========================= */

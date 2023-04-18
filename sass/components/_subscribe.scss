@@ -1,0 +1,85 @@
+@import "../variables/variable";
+@import "../base/common";
+@import "../mixin/mixin";
+/*==========================
+SUBSCRIBE PART START 
+==========================*/
+#subscribe {
+  background-color: $grey_color_3;
+  .container {
+    .row {
+      border-bottom: 1px solid $welcome_text_color;
+      padding: 25px;
+      .col-lg-6 {
+        border-right: 1px solid $welcome_text_color;
+        .text {
+          h3 {
+            @include h3;
+          }
+          p {
+            @include paragraph;
+          }
+        }
+        .text_box {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          input {
+            @include common_input;
+          }
+          button {
+            @include common_button;
+            margin-bottom: 9px;
+          }
+        }
+      }
+    }
+  }
+}
+/*==========================
+SUBSCRIBE PART END
+==========================*/
+//DARK MODE SETTINGS START 
+body.dark{
+  #subscribe {
+    background-color: $black_color_4;
+    .container {
+      .row {
+        border-bottom: 1px solid $welcome_bg;
+        padding: 25px;
+        .col-lg-6 {
+          border-right: 1px solid $welcome_text_color;
+          .text {
+            h3 {
+              
+              color: $white_color;
+            }
+            p {
+              
+              color: $dark_white_color;
+            }
+          }
+          .text_box {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            input {
+              background-color: $black_color_4;
+              border-color: $dark_white_color;
+              color: $white_color;
+            }
+            button {
+              @include common_button;
+              margin-bottom: 9px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//DARK MODE SETTINGS END

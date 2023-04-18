@@ -1,0 +1,423 @@
+@import "../variables/variable";
+
+/* ======================
+    TOP COLLECTION START
+========================= */
+#top_collection {
+  .container {
+    .common_heading {
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+      padding-bottom: 40px;
+      span {
+        color: $orange_color;
+        font-size: 20px;
+      }
+      h2 {
+        position: relative;
+        margin-top: 5px;
+        margin-bottom: 25px;
+        &::after {
+          content: "";
+          height: 2px;
+          width: 80px;
+          background-color: $orange_color;
+          position: absolute;
+          top: calc(100% + 5px);
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+      p {
+        font-weight: 400;
+        font-size: 14px;
+        color: #777777;
+        margin-bottom: 5px;
+      }
+    }
+    .product_slider {
+      .item {
+        .top_collection_item {
+          .image_box {
+            position: relative;
+            z-index: 998;
+            .label {
+              position: absolute;
+              top: 10px;
+              left: 10px;
+              height: 50px;
+              width: 50px;
+              border-radius: 50%;
+              background-color: $orange_color;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: #f8f8f8;
+              text-transform: uppercase;
+              font-weight: 700;
+            }
+            .icons {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+              gap: 10px;
+              width: 60px;
+              position: absolute;
+              right: 10%;
+              bottom: 0;
+              a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                transform: translateX(50px);
+                font-size: 18px;
+                position: relative;
+                opacity: 0;
+                visibility: hidden;
+                i {
+                  font-size: inherit;
+                  color: #333333;
+                }
+                &:nth-child(1) {
+                  transition: all linear 0.1s;
+                }
+                &:nth-child(2) {
+                  transition: all linear 0.2s;
+                }
+                &:nth-child(3) {
+                  transition: all linear 0.3s;
+                }
+                &:nth-child(4) {
+                  transition: all linear 0.4s;
+                }
+                &:hover i {
+                  color: $orange_color;
+                }
+                span{
+                    position: absolute;
+                    top: 100%;
+                    left: 0%;
+                    transform: translateX(-50%);
+                    display: inline-block;
+                    width: 100px;
+                    background-color: $black_color_3;
+                    color: $white_color;
+                    font-size: 10px;
+                    text-align: center;
+                    border-radius: 5px;
+                    letter-spacing: 1px;
+                    z-index: 999;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: $transition;
+                }
+                &:hover span{
+                    opacity: 1;
+                    visibility: visible;
+                }
+              }
+            }
+            .display {
+              a {
+                max-width: 255px;
+                height: 346px;
+                z-index: 998;
+                display: none;
+                img {
+                  max-width: 100%;
+                  height: 100%;
+                }
+              }
+              a.active {
+                display: block;
+              }
+            }
+            .thambnail {
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              ul {
+                padding: 0;
+                li {
+                  margin-bottom: 1px;
+                  max-width: 45px;
+                  height: 61px;
+                  img {
+                    max-width: 100%;
+                    height: 100%;
+                    filter: opacity(30%);
+                    cursor: pointer;
+                  }
+                }
+                li.active {
+                  img {
+                    filter: opacity(100%);
+                  }
+                }
+              }
+            }
+          }
+          .text_box {
+            .stars {
+              margin-top: 5px;
+              i {
+                font-size: 12px;
+                color: $yellow_color;
+              }
+            }
+            .text {
+              a {
+                width: 100%;
+                font-weight: 400;
+                font-size: 16px;
+                color: #777777;
+              }
+              h4 {
+                span {
+                  font-weight: 700;
+                  font-size: 18px;
+                  color: #222222;
+                }
+                del {
+                  font-weight: 400;
+                  font-size: 14px;
+                  color: #aaaaaa;
+                }
+              }
+            }
+            .colors {
+              i {
+                font-size: 20px;
+                margin-right: 5px;
+                cursor: pointer;
+              }
+              i.white_color {
+                border: 1px solid rgba(0, 0, 0, 0.507);
+                border-radius: 50%;
+              }
+            }
+          }
+          &:hover .image_box .icons a {
+            opacity: 1;
+            visibility: visible;
+            right: -10%;
+            transform: translateX(0);
+          }
+        }
+      }
+    }
+  }
+}
+/* ======================
+    TOP COLLECTION END
+========================= */
+
+// DARK MODE SETTINGS START 
+body.dark{
+  #top_collection {
+    .container {
+      .common_heading {
+        span {
+          color: $white_color;
+        }
+        h2 {
+          color: $white_color;
+          &::after {
+            content: "";
+            height: 2px;
+            width: 80px;
+            background-color: $orange_color;
+            position: absolute;
+            top: calc(100% + 5px);
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+        p {
+          font-weight: 400;
+          font-size: 14px;
+          color: $white_color;
+          margin-bottom: 5px;
+        }
+      }
+      .product_slider {
+        .item {
+          .top_collection_item {
+            .image_box {
+              position: relative;
+              z-index: 998;
+              .label {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+                background-color: $orange_color;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #f8f8f8;
+                text-transform: uppercase;
+                font-weight: 700;
+              }
+              .icons {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: 10px;
+                width: 60px;
+                position: absolute;
+                right: 10%;
+                bottom: 0;
+                a {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  width: 30px;
+                  height: 30px;
+                  border-radius: 50%;
+                  transform: translateX(50px);
+                  font-size: 18px;
+                  position: relative;
+                  opacity: 0;
+                  visibility: hidden;
+                  i {
+                    font-size: inherit;
+                    color: #333333;
+                  }
+                  &:nth-child(1) {
+                    transition: all linear 0.1s;
+                  }
+                  &:nth-child(2) {
+                    transition: all linear 0.2s;
+                  }
+                  &:nth-child(3) {
+                    transition: all linear 0.3s;
+                  }
+                  &:nth-child(4) {
+                    transition: all linear 0.4s;
+                  }
+                  &:hover i {
+                    color: $orange_color;
+                  }
+                  span{
+                      position: absolute;
+                      top: 100%;
+                      left: 0%;
+                      transform: translateX(-50%);
+                      display: inline-block;
+                      width: 100px;
+                      background-color: $black_color_3;
+                      color: $white_color;
+                      font-size: 10px;
+                      text-align: center;
+                      border-radius: 5px;
+                      letter-spacing: 1px;
+                      z-index: 999;
+                      opacity: 0;
+                      visibility: hidden;
+                      transition: $transition;
+                  }
+                  &:hover span{
+                      opacity: 1;
+                      visibility: visible;
+                  }
+                }
+              }
+              .display {
+                a {
+                  max-width: 255px;
+                  height: 346px;
+                  z-index: 998;
+                  display: none;
+                  img {
+                    max-width: 100%;
+                    height: 100%;
+                  }
+                }
+                a.active {
+                  display: block;
+                }
+              }
+              .thambnail {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                ul {
+                  padding: 0;
+                  li {
+                    margin-bottom: 1px;
+                    max-width: 45px;
+                    height: 61px;
+                    img {
+                      max-width: 100%;
+                      height: 100%;
+                      filter: opacity(30%);
+                      cursor: pointer;
+                    }
+                  }
+                  li.active {
+                    img {
+                      filter: opacity(100%);
+                    }
+                  }
+                }
+              }
+            }
+            .text_box {
+              .stars {
+                margin-top: 5px;
+                i {
+                  font-size: 12px;
+                  color: $yellow_color;
+                }
+              }
+              .text {
+                a {
+                 color: $white_color;
+                }
+                h4 {
+                  span {
+                    font-weight: 700;
+                    font-size: 18px;
+                    color: $white_color;
+                  }
+                  del {
+                    font-weight: 400;
+                    font-size: 14px;
+                    color: #aaaaaa;
+                  }
+                }
+              }
+              .colors {
+                i {
+                  font-size: 20px;
+                  margin-right: 5px;
+                  cursor: pointer;
+                }
+                i.white_color {
+                  border: 1px solid rgba(0, 0, 0, 0.507);
+                  border-radius: 50%;
+                }
+              }
+            }
+            &:hover .image_box .icons a {
+              opacity: 1;
+              visibility: visible;
+              right: -10%;
+              transform: translateX(0);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// DARK MODE SETTINGS END

@@ -1,0 +1,48 @@
+@import "../base/common";
+@import "../variables/variable";
+
+/*===================================================
+                Special Offer Part Start
+=================================================== */
+#fashion_trends {
+  background-image: url("../../images/fashion_bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 190px 0 190px 0;
+  margin-bottom: 70px;
+  margin-top: 60px;
+  .container {
+    .row {
+      .col-lg-6 {
+        text-align: center;
+        .content {
+          h1 {
+            font-size: 90px;
+            font-weight: 700;
+            color: $orange_color;
+            text-transform: uppercase;
+          }
+          h2 {
+            font-weight: 700;
+            font-size: 55px;
+            color: $black_color_2;
+            text-transform: uppercase;
+          }
+          h3 {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 31px;
+            color: $grey_color;
+            letter-spacing: 10px;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+}
+/*===================================================
+                Special Offer Part end
+=================================================== */

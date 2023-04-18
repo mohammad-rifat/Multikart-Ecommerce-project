@@ -1,0 +1,57 @@
+@import "../variables/variable";
+/* ======================
+    MOVE TO TOP START
+========================= */
+#move_top {
+  height: 50px;
+  width: 50px;
+  background-color: $orange_color;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  right: 0px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all linear 0.3s;
+  text-align: center;
+  z-index: 9999;
+  a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    i {
+        color: white;
+        font-size: 15px;
+    }
+  }
+  span {
+    width: 100px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    color: white;
+    position: absolute;
+    top: -60%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all linear 0.3s;
+  }
+  &:hover span{
+    width: 100px;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+#move_top.sticky {
+    opacity: 1;
+    visibility: visible;
+    bottom: 100px;
+    right: 30px;
+  }
+/* ======================
+    MOVE TO TOP END
+========================= */
